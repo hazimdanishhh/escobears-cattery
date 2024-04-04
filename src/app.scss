@@ -1,0 +1,48 @@
+$primary: rgb(124, 114, 105);
+$secondary: rgb(96, 114, 116);
+$tertiary: rgb(250, 238, 209);
+$quarternary: rgb(222, 208, 182);
+
+// General Styles
+html {
+  scroll-behavior: smooth;
+  // scroll-snap-type: y mandatory;
+  // scroll-snap-type: y proximity;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+body {
+  color: $primary;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section {
+  // height: 100vh;
+  scroll-snap-align: center;
+}
+// General Styles
+
+// Test Component
+// .course {
+//   height: 100vh;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+
+//   .box {
+//     width: 200px;
+//     height: 200px;
+//     background-color: $primary;
+//     border-radius: 20%;
+//   }
+// }

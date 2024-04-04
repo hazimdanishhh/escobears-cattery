@@ -1,0 +1,96 @@
+.hero {
+  height: calc(100% - 100px);
+
+  .hero-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 100%;
+    max-width: 1366px;
+    margin: auto;
+    padding: 1rem;
+
+    .welcome-container {
+      width: 40%;
+
+      .welcome-title {
+        padding: 1rem;
+        font-size: 3rem;
+      }
+
+      .welcome-desc {
+        padding: 1rem;
+      }
+
+      .welcome-buttons {
+        .btn {
+          display: inline-block;
+          width: fit-content;
+          margin: 1rem;
+          padding: 10px;
+          background-color: rgb(96, 114, 116);
+          color: white;
+          border: 2px solid rgb(96, 114, 116);
+          border-radius: 10px;
+          cursor: pointer;
+        }
+
+        .btn:hover {
+          background-color: rgba(96, 114, 116, 0.7);
+        }
+
+        .cats-btn {
+          background-color: white;
+          color: rgb(96, 114, 116);
+        }
+
+        .cats-btn:hover {
+          color: white;
+        }
+      }
+
+      .arrow-down {
+        height: 1.7rem;
+        margin: 3rem 0 0 1rem;
+        cursor: pointer;
+      }
+    }
+
+    .img-container {
+      display: flex;
+      flex-wrap: wrap;
+      width: 40%;
+      min-width: 300px;
+      justify-content: center;
+      margin: 1rem;
+
+      .hero-img {
+        width: 100%;
+        border-radius: 20px;
+        outline: 1px solid white;
+        outline-offset: -10px;
+      }
+    }
+  }
+}
+
+// Media Queries
+@media screen and (max-width: 1024px) {
+  .hero {
+    margin-top: 70px;
+  }
+
+  .hero-wrapper {
+    flex-direction: column;
+
+    #welcome-container.welcome-container {
+      width: 100%;
+      text-align: center;
+    }
+
+    #img-container.img-container {
+      width: 80%;
+    }
+  }
+}

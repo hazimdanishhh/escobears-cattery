@@ -1,0 +1,59 @@
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  margin: 0.5rem;
+  width: 15%;
+  max-width: 500px;
+  height: 40%;
+  transform: skew(-20deg);
+  transition: 1s;
+
+  .adults-img {
+    height: 600px;
+    transform: skew(20deg);
+  }
+
+  .cat-name {
+    font-size: 30px;
+    color: white;
+    background-color: rgba(124, 114, 105, 0.5);
+    padding: 0 10px;
+
+    position: absolute;
+    bottom: 20px;
+    transform: skew(20deg);
+  }
+
+  .cat-desc {
+    font-size: 30px;
+    color: white;
+    padding: 0 10px;
+
+    position: absolute;
+    text-align: center;
+
+    height: 100%;
+    width: 100%;
+
+    .adults-desc-container {
+      width: fit-content;
+      background-color: rgba(124, 114, 105, 0.5);
+
+      .adults-desc {
+        width: fit-content;
+        margin: 10px 0;
+        padding: 0 5px;
+        font-size: 20px;
+        transform: skew(20deg);
+      }
+    }
+  }
+}
+
+.img-container:hover {
+  width: 100%;
+  cursor: pointer;
+}

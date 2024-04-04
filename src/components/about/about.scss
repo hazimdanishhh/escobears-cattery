@@ -1,0 +1,61 @@
+.about {
+  height: 100%;
+
+  .about-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 100%;
+    max-width: 1366px;
+    margin: auto;
+    padding: 1rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    // ABOUT SECTION
+    .about-container {
+      width: 30%;
+    }
+
+    // PROMISE SECTION
+    .promise-container {
+      text-align: center;
+      width: 60%;
+
+      .promise-details {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+
+        padding: 2rem 0;
+      }
+    }
+  }
+}
+
+// Media Queries
+@media screen and (max-width: 1024px) {
+  .about {
+    padding-top: 70px;
+
+    .about-wrapper {
+      flex-direction: column;
+      gap: 2rem;
+
+      .about-container {
+        width: 80% !important;
+        text-align: center;
+      }
+
+      .promise-container {
+        width: 100% !important;
+
+        .promise-details {
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+}

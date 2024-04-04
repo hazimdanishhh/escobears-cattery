@@ -1,0 +1,22 @@
+.promise-item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+
+  width: 25%;
+
+  .promise-img {
+    height: 5rem;
+  }
+
+  .promise-desc {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .promise-item {
+    min-width: 200px;
+  }
+}

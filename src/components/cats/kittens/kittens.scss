@@ -1,0 +1,60 @@
+.kittens {
+  height: 100%;
+
+  .kittens-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    max-width: 1366px;
+    margin: auto;
+    padding: 1rem;
+
+    .kittens-title {
+      width: 100%;
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .kittens-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      flex-wrap: wrap;
+
+      height: 100%;
+
+      .kittens-img-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        margin: 2rem;
+        border-radius: 50%;
+        height: 250px;
+        width: 250px;
+        transition: 0.5s;
+
+        .kittens-img {
+          width: 300px;
+        }
+
+        .kittens-name {
+          font-size: 30px;
+          color: white;
+          background-color: rgba(124, 114, 105, 0.5);
+          padding: 0 10px;
+
+          position: absolute;
+          bottom: 10%;
+        }
+      }
+
+      .kittens-img-container:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
