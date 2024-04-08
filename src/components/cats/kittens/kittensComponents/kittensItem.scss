@@ -1,0 +1,59 @@
+.kittens-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  margin: 2rem;
+  //   border-radius: 50%;
+  border-radius: 10px;
+  height: 250px;
+  width: 250px;
+  transition: 0.5s;
+  position: relative;
+
+  // order: 1;
+
+  .kittens-img {
+    width: 300px;
+  }
+
+  .kittens-name {
+    font-size: 30px;
+    color: white;
+    background-color: rgba(124, 114, 105, 0.5);
+    padding: 0 10px;
+
+    position: absolute;
+    bottom: 10px;
+  }
+
+  .kittens-img-2 {
+    display: none;
+  }
+}
+
+.kittens-img-container:hover {
+  cursor: pointer;
+}
+
+.kittens-img-container-clicked {
+  border-radius: 0;
+  // order: 0;
+  height: 90%;
+  width: 90%;
+
+  cursor: pointer;
+  //   transition: 1s;
+
+  .kittens-img {
+    width: 45%;
+    margin-right: 1rem;
+  }
+
+  .kittens-img-2 {
+    padding: 2px;
+    width: 50%;
+    display: inline-block;
+  }
+}

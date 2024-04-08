@@ -17,7 +17,7 @@ function Adults() {
           {/* TITLE */}
 
           <motion.h2
-            className="title"
+            className="adults-title"
             initial={{ opacity: 0, x: -50, y: 90 }}
             whileInView={{
               opacity: 1,
@@ -31,21 +31,23 @@ function Adults() {
 
           {/* IMAGES */}
 
-          {adultsList.map((adultsItem, i) => {
-            return (
-              <AdultsItem
-                key={i}
-                id={i}
-                src={adultsItem.src}
-                alt={adultsItem.alt}
-                name={adultsItem.name}
-                type={adultsItem.type}
-                breed={adultsItem.breed}
-                color={adultsItem.color}
-                age={adultsItem.age}
-              />
-            );
-          })}
+          <div className="adults-images">
+            {adultsList.map((adultsItem, i) => {
+              return (
+                <AdultsItem
+                  key={i}
+                  id={i}
+                  src={adultsItem.src}
+                  alt={adultsItem.alt}
+                  name={adultsItem.name}
+                  type={adultsItem.type}
+                  breed={adultsItem.breed}
+                  color={adultsItem.color}
+                  age={adultsItem.age}
+                />
+              );
+            })}
+          </div>
         </motion.div>
       </div>
     </div>

@@ -1,22 +1,22 @@
-.img-container {
+.adults-img-container {
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
 
   margin: 0.5rem;
-  width: 15%;
+  width: 20%;
   max-width: 500px;
   height: 40%;
   transform: skew(-20deg);
-  transition: 1s;
+  transition: 0.5s;
 
   .adults-img {
     height: 600px;
     transform: skew(20deg);
   }
 
-  .cat-name {
+  .adults-name {
     font-size: 30px;
     color: white;
     background-color: rgba(124, 114, 105, 0.5);
@@ -27,7 +27,7 @@
     transform: skew(20deg);
   }
 
-  .cat-desc {
+  .adults-desc-container {
     font-size: 30px;
     color: white;
     padding: 0 10px;
@@ -38,7 +38,7 @@
     height: 100%;
     width: 100%;
 
-    .adults-desc-container {
+    .adults-desc-list {
       width: fit-content;
       background-color: rgba(124, 114, 105, 0.5);
 
@@ -53,7 +53,49 @@
   }
 }
 
-.img-container:hover {
-  width: 100%;
-  cursor: pointer;
+// Media Queries
+@media screen and (min-width: 1024px) {
+  .adults-img-container:hover {
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .adults-img-container-clicked {
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .adults-img-container {
+    width: 20%;
+    transform: skew(0deg);
+
+    .adults-img {
+      height: 400px;
+      transform: skew(0deg);
+    }
+
+    .adults-name {
+      transform: skew(0deg);
+    }
+
+    .adults-desc-container {
+      .adults-desc-list {
+        .adults-desc {
+          transform: skew(0deg);
+        }
+      }
+    }
+  }
+
+  .adults-img-container:hover {
+    cursor: pointer;
+  }
+
+  .adults-img-container-clicked {
+    cursor: pointer;
+    width: 300%;
+    max-width: fit-content;
+    transition: 1s;
+  }
 }

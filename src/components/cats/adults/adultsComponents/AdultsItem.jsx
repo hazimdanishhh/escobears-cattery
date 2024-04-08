@@ -1,34 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import "./adultsItem.scss";
 import { motion } from "framer-motion";
 
 function AdultsItem(props) {
+  const [imgIsClicked, setImgIsClicked] = useState(false);
+
+  function ImgClicked() {
+    console.log(imgIsClicked);
+    setImgIsClicked(!imgIsClicked);
+  }
+
   return (
     <>
       <motion.div
-        className="img-container"
+        className={`adults-img-container ${
+          imgIsClicked ? "adults-img-container-clicked" : null
+        }`}
         initial={{ opacity: 0 }}
         whileInView={{
           opacity: 1,
           transition: { duration: 1.3, delay: 0.3 * props.id },
         }}
+        onClick={ImgClicked}
       >
         <img className="adults-img" src={props.src} alt={props.alt} />
-        <p className="cat-name">{props.name}</p>
+        <p className="adults-name">{props.name}</p>
         <motion.div
-          className="cat-desc"
+          className="adults-desc-container"
           initial={{ opacity: 0 }}
           whileHover={{
             opacity: 1,
             transition: { duration: 0.3 },
           }}
         >
-          <div className="adults-desc-container">
-            <p className="adults-desc">{props.type}</p>
-            <p className="adults-desc">{props.breed}</p>
-            <p className="adults-desc">{props.color}</p>
-            <p className="adults-desc">{props.age}</p>
-          </div>
+          <ul className="adults-desc-list">
+            <li className="adults-desc">{props.type}</li>
+            <li className="adults-desc">{props.breed}</li>
+            <li className="adults-desc">{props.color}</li>
+            <li className="adults-desc">{props.age}</li>
+          </ul>
         </motion.div>
       </motion.div>
     </>

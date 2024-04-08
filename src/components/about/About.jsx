@@ -7,6 +7,20 @@ import AboutDesc from "./aboutComponents/AboutDesc";
 import aboutList from "./aboutComponents/aboutList";
 
 function About() {
+  const variant = {
+    initial: {
+      opacity: 0,
+      x: -100,
+    },
+    whileInView: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 1.3,
+      },
+    },
+  };
+
   return (
     <div className="about">
       <div className="about-wrapper">
@@ -14,9 +28,9 @@ function About() {
 
         <motion.div
           className="about-container"
-          initial={{ opacity: 0, x: -100 }}
-          transition={{ duration: 1.3, delay: 0.3 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial="initial"
+          whileInView="whileInView"
+          variants={variant}
         >
           <h2>about us.</h2>
 
@@ -26,13 +40,14 @@ function About() {
         </motion.div>
 
         {/* PROMISE CONTAINER */}
-        <div
-          className="promise-container"
-          initial={{ opacity: 0, x: 100 }}
-          transition={{ duration: 1.3, delay: 0.3 }}
-          whileInView={{ opacity: 1, x: 0 }}
-        >
-          <h2>our promises.</h2>
+        <div className="promise-container">
+          <motion.h2
+            initial="initial"
+            whileInView="whileInView"
+            variants={variant}
+          >
+            our promises.
+          </motion.h2>
 
           <div className="promise-details">
             {promiseList.map((promiseItem, i) => {

@@ -5,14 +5,30 @@
   gap: 1rem;
 
   width: 25%;
+  padding: 1rem;
+  border-radius: 20px;
+  border: 1px solid white;
 
   .promise-img {
     height: 5rem;
   }
 
+  .promise-item-title {
+    // color: rgb(96, 114, 116);
+  }
+
   .promise-desc {
     text-align: center;
+    // color: rgb(96, 114, 116);
   }
+}
+
+.promise-item:hover {
+  transition: 0.5s;
+  // background-color: rgba(96, 114, 116, 0.2);
+  // border: 1px solid rgba(96, 114, 116, 0.4);
+  background-color: rgba(124, 114, 105, 0.2);
+  border: 1px solid rgba(124, 114, 105, 0.4);
 }
 
 @media screen and (max-width: 1024px) {
