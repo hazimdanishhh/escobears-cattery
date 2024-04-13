@@ -1,10 +1,27 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./kittensItem.scss";
 import { motion } from "framer-motion";
 import Carousel from "../../../carousel/Carousel";
 
 function KittensItem(props) {
   const [imgIsClicked, setImgIsClicked] = useState(false);
+
+  const imageRef = useRef();
+
+  useEffect(() => {
+    function closeImage(e) {
+      console.log(e);
+      if (e.target !== imageRef.current) {
+        setImgIsClicked(false);
+      }
+    }
+
+    document.body.addEventListener("click", closeImage);
+
+    return () => {
+      document.body.removeEventListener("click", closeImage);
+    };
+  });
 
   function ImgClicked() {
     console.log(imgIsClicked);
@@ -29,7 +46,12 @@ function KittensItem(props) {
         }}
         onClick={ImgClicked}
       >
-        <img className="kittens-img" src={props.img} alt={props.alt} />
+        <img
+          className="kittens-img"
+          src={props.img}
+          alt={props.alt}
+          ref={imageRef}
+        />
         <p className="kittens-name">{props.name}</p>
         <div>
           <img className="kittens-img-2" src="/kitten-1.png" alt="kitten 1" />

@@ -1,9 +1,26 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./adultsItem.scss";
 import { motion } from "framer-motion";
 
 function AdultsItem(props) {
   const [imgIsClicked, setImgIsClicked] = useState(false);
+
+  const imageRef = useRef();
+
+  useEffect(() => {
+    function closeImage(e) {
+      console.log(e);
+      if (e.target !== imageRef.current) {
+        setImgIsClicked(false);
+      }
+    }
+
+    document.body.addEventListener("click", closeImage);
+
+    return () => {
+      document.body.removeEventListener("click", closeImage);
+    };
+  });
 
   function ImgClicked() {
     console.log(imgIsClicked);
@@ -26,6 +43,7 @@ function AdultsItem(props) {
         <img className="adults-img" src={props.src} alt={props.alt} />
         <p className="adults-name">{props.name}</p>
         <motion.div
+          ref={imageRef}
           className="adults-desc-container"
           initial={{ opacity: 0 }}
           whileHover={{

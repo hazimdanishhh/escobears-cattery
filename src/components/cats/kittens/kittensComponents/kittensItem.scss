@@ -12,7 +12,7 @@
   transition: 0.5s;
   position: relative;
 
-  // order: 1;
+  order: 1;
 
   .kittens-img {
     width: 300px;
@@ -40,7 +40,7 @@
 
 .kittens-img-container-clicked {
   border-radius: 0;
-  // order: 0;
+  order: 0;
   height: 90%;
   width: 90%;
 
