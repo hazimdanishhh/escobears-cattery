@@ -26,6 +26,7 @@
 
     position: absolute;
     bottom: 10px;
+    z-index: 100;
   }
 
   .kittens-img-2 {
@@ -55,5 +56,42 @@
     padding: 2px;
     width: 50%;
     display: inline-block;
+  }
+}
+
+// Media Queries
+@media screen and (max-width: 1024px) {
+  .kittens-img-container {
+    height: 150px;
+    width: 150px;
+
+    .kittens-img {
+      width: 200px;
+    }
+
+    .kittens-name {
+      font-size: 1rem;
+    }
+  }
+
+  .kittens-img-container-clicked {
+    border-radius: 0;
+    // order: 0;
+    height: 90%;
+    width: 90%;
+
+    cursor: pointer;
+    //   transition: 1s;
+
+    .kittens-img {
+      width: 45%;
+      margin-right: 1rem;
+    }
+
+    .kittens-img-2 {
+      padding: 2px;
+      width: 50%;
+      display: inline-block;
+    }
   }
 }

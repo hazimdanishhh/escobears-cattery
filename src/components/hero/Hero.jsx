@@ -1,6 +1,7 @@
 import React from "react";
 import "./hero.scss";
 import { motion } from "framer-motion";
+import Carousel from "../carousel/Carousel";
 
 function Hero() {
   const textVariants = {
@@ -102,7 +103,7 @@ function Hero() {
         </motion.div>
 
         {/* IMAGE CONTAINER */}
-        <motion.div
+        {/* <motion.div
           className="img-container"
           id="img-container"
           initial={{ opacity: 0, y: 50 }}
@@ -110,6 +111,17 @@ function Hero() {
           whileInView={{ opacity: 1, y: 0 }}
         >
           <img className="hero-img" src="/cat-1.jpg" alt="cat 1 image" />
+        </motion.div> */}
+
+        {/* CAROUSEL */}
+        <motion.div
+          className="img-container"
+          id="img-container"
+          initial={{ opacity: 0, y: 50 }}
+          transition={{ duration: 1.3, delay: 0.3 }}
+          whileInView={{ opacity: 1, y: 0 }}
+        >
+          <Carousel />
         </motion.div>
       </div>
     </div>

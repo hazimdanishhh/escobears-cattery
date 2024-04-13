@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./kittensItem.scss";
 import { motion } from "framer-motion";
+import Carousel from "../../../carousel/Carousel";
 
 function KittensItem(props) {
   const [imgIsClicked, setImgIsClicked] = useState(false);
@@ -35,6 +36,8 @@ function KittensItem(props) {
           <img className="kittens-img-2" src="/kitten-1.png" alt="kitten 1" />
           <img className="kittens-img-2" src="/kitten-1.png" alt="kitten 1" />
           <img className="kittens-img-2" src="/kitten-1.png" alt="kitten 1" />
+
+          {/* <Carousel className="kittens-img-2" /> */}
         </div>
       </motion.div>
     </>
