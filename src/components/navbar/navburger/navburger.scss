@@ -1,0 +1,59 @@
+.navburger {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0px 0px 5px rgba($color: black, $alpha: 0.5);
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+
+  .navburger-list {
+    display: none;
+  }
+
+  .navburger-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    border-radius: 10px;
+    border: none;
+
+    .navburger-icon {
+      width: 50px;
+      vertical-align: bottom;
+    }
+  }
+
+  .navburger-btn:hover {
+    background-color: rgba($color: rgb(124, 114, 105), $alpha: 0.2);
+    transition: 0.2s;
+  }
+}
+
+.navburger-open {
+  width: 200px;
+  height: 200px;
+}
+
+.navburger-list-open {
+  display: flex !important;
+  .navburger-links {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    align-items: center;
+    gap: 15px;
+  }
+}
+
+// Media Queries
+@media screen and (min-width: 1024px) {
+  .navburger {
+    display: none;
+  }
+}

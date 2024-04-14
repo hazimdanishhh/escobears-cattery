@@ -5,6 +5,7 @@ import NavItem from "./navbarComponents/NavItem";
 import navList from "./navbarComponents/navList";
 import SocialsItem from "./navbarComponents/SocialsItem";
 import socialsList from "./navbarComponents/socialsList";
+import Navburger from "./navburger/Navburger";
 
 export default function Navbar() {
   return (
@@ -30,7 +31,7 @@ export default function Navbar() {
         </motion.a>
 
         {/* Nav */}
-        <ul className="nav">
+        <ul className="nav" id="nav">
           {navList.map((navItem, i) => {
             return (
               <NavItem
@@ -57,6 +58,9 @@ export default function Navbar() {
             );
           })}
         </div>
+
+        {/* NavBurger */}
+        <Navburger />
       </div>
     </div>
   );
