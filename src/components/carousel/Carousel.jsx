@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./carousel.scss";
 import carouselList from "./carouselList";
+import { motion } from "framer-motion";
 
 function Carousel() {
   const [slide, setSlide] = useState(0);
@@ -15,12 +16,14 @@ function Carousel() {
 
   return (
     <div className="carousel">
-      <img
+      <motion.img
         className="carousel-arrow arrow-left"
         src="/carousel-left-arrow.svg"
         alt="left arrow"
         onClick={prevSlide}
+        whileHover={{ scale: 1.1 }}
       />
+
       {carouselList.map((carouselItem, i) => {
         return (
           <img
@@ -33,11 +36,13 @@ function Carousel() {
           />
         );
       })}
-      <img
+
+      <motion.img
         className="carousel-arrow arrow-right"
         src="/carousel-right-arrow.svg"
         alt="right arrow"
         onClick={nextSlide}
+        whileHover={{ scale: 1.1 }}
       />
 
       <div className="indicators">

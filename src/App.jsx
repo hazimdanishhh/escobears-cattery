@@ -6,6 +6,7 @@ import Adults from "./components/cats/adults/Adults";
 import Kittens from "./components/cats/kittens/Kittens";
 import About from "./components/about/About";
 import Footer from "./components/footer/Footer";
+import Contact from "./components/contact/Contact";
 
 export default function App() {
   return (
@@ -33,11 +34,14 @@ export default function App() {
 
       {/* <section>Parallax</section> */}
 
-      <section id="contact">Contact</section>
-
-      <section id="footer">
-        <Footer />
+      <section id="contact">
+        <Contact />
       </section>
+
+      {/* <section id="footer">
+      </section> */}
+
+      <Footer id="footer" />
     </div>
   );
 }

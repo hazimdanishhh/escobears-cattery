@@ -6,6 +6,11 @@ import Carousel from "../../../carousel/Carousel";
 function KittensItem(props) {
   const [imgIsClicked, setImgIsClicked] = useState(false);
 
+  // TODO: Create new component to open img-2 when img-1 is clicked
+  // const [isStart, setIsStart] = useState(false)
+  // ...
+  // {isStart ? <Start> : <Button onClick={() => setIsStart(true)}>Start</Button>}
+
   const imageRef = useRef();
 
   useEffect(() => {
