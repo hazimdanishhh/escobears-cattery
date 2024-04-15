@@ -56,8 +56,13 @@ function Contact() {
           </div>
 
           <div className="contact-item">
-            <h3>address</h3>
-            <span>Dato Keramat, Kuala Lumpur</span>
+            <a
+              target="__blank"
+              href="https://www.google.com/maps/place/Kampung+Datuk+Keramat,+Kuala+Lumpur,+Federal+Territory+of+Kuala+Lumpur/@3.1680737,101.7148147,14.75z/data=!4m6!3m5!1s0x31cc37c17b6d587f:0x2b0404225dd3e664!8m2!3d3.1689298!4d101.7276507!16zL20vMGRfY3dk?entry=ttu"
+            >
+              <h3>address</h3>
+              <span>Dato Keramat, Kuala Lumpur</span>
+            </a>
           </div>
 
           <div className="contact-item">

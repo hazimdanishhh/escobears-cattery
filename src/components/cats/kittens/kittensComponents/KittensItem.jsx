@@ -7,9 +7,9 @@ function KittensItem(props) {
   const [imgIsClicked, setImgIsClicked] = useState(false);
 
   // TODO: Create new component to open img-2 when img-1 is clicked
-  // const [isStart, setIsStart] = useState(false)
+  // const [isClicked, setIsClicked] = useState(false)
   // ...
-  // {isStart ? <Start> : <Button onClick={() => setIsStart(true)}>Start</Button>}
+  // {isClicked ? <IMAGE2 COMPONENT /> : <img onClick={() => setIsClicked(true)} src="img-1" />}
 
   const imageRef = useRef();
 

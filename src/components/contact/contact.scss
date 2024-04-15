@@ -38,6 +38,7 @@
       }
 
       .contact-btn {
+        cursor: pointer;
         padding: 10px;
         color: white;
         background-color: rgb(124, 114, 105);
@@ -48,7 +49,6 @@
       .contact-btn:hover {
         color: rgb(124, 114, 105);
         background-color: rgba(124, 114, 105, 0.3);
-        border: 1px solid rgb(124, 114, 105);
         transition: 0.2s;
       }
     }
