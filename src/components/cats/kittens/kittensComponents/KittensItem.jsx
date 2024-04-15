@@ -59,10 +59,26 @@ function KittensItem(props) {
         />
         <p className="kittens-name">{props.name}</p>
         <div>
-          <img className="kittens-img-2" src="./kitten-1.png" alt="kitten 1" />
-          <img className="kittens-img-2" src="./kitten-1.png" alt="kitten 1" />
-          <img className="kittens-img-2" src="./kitten-1.png" alt="kitten 1" />
-          <img className="kittens-img-2" src="./kitten-1.png" alt="kitten 1" />
+          <img
+            className="kittens-img-2"
+            src="./litter-a-1.png"
+            alt="kitten 1"
+          />
+          <img
+            className="kittens-img-2"
+            src="./litter-a-2.png"
+            alt="kitten 1"
+          />
+          <img
+            className="kittens-img-2"
+            src="./litter-a-3.png"
+            alt="kitten 1"
+          />
+          <img
+            className="kittens-img-2"
+            src="./litter-a-4.png"
+            alt="kitten 1"
+          />
 
           {/* <Carousel className="kittens-img-2" /> */}
         </div>

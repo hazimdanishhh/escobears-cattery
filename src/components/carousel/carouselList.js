@@ -1,22 +1,30 @@
 const carouselList = [
   {
-    src: "./cat-1.jpg",
+    src: "./litter-a.png",
     alt: "cat 1 image",
   },
   {
-    src: "./cat-2.png",
+    src: "./litter-b.png",
     alt: "cat 2 image",
   },
   {
-    src: "./cat-3.png",
+    src: "./litter-c.png",
     alt: "cat 3 image",
   },
   {
-    src: "./cat-4.png",
+    src: "./litter-d.png",
     alt: "cat 4 image",
   },
   {
-    src: "./cat-5.png",
+    src: "./litter-e.png",
+    alt: "cat 5 image",
+  },
+  {
+    src: "./litter-f.png",
+    alt: "cat 5 image",
+  },
+  {
+    src: "./litter-g.png",
     alt: "cat 5 image",
   },
 ];

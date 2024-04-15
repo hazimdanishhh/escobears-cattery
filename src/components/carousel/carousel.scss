@@ -51,14 +51,18 @@
     bottom: 1rem;
 
     .indicator {
-      background: white;
-      height: 0.5rem;
-      width: 0.5rem;
-      border-radius: 100%;
+      background-color: rgb(96, 114, 116);
+      height: 0.3rem;
+      width: 1.3rem;
+      border-radius: 10px;
       border: none;
-      box-shadow: 0 0 5px rgba($color: #ffffff50, $alpha: 0.3);
+      box-shadow: 0 0 5px rgba($color: #ffffff11, $alpha: 0.3);
       margin: 0 0.5rem;
       cursor: pointer;
+    }
+
+    .indicator:hover {
+      background-color: rgba(96, 114, 116, 0.5);
     }
 
     .indicator-inactive {
