@@ -48,7 +48,7 @@ function Contact() {
           whileInView="whileInView"
           variants={infoVariant}
         >
-          <h2>contact us.</h2>
+          <h2>get in touch with us.</h2>
 
           <div className="contact-item">
             <h3>e-mail</h3>
