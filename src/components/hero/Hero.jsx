@@ -92,7 +92,7 @@ function Hero() {
 
           <a href="#about">
             <motion.img
-              src="/arrow-down.svg"
+              src="./arrow-down.svg"
               alt="arrow down"
               className="arrow-down"
               initial="initial"

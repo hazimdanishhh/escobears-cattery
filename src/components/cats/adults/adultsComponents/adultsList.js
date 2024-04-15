@@ -1,6 +1,6 @@
 const adultsList = [
   {
-    src: "/cat-5.png",
+    src: "./cat-5.png",
     alt: "cat 5",
     name: "ivy.",
     type: "queen.",
@@ -9,7 +9,7 @@ const adultsList = [
     age: new Date().getFullYear() - 2022 + " yrs.",
   },
   {
-    src: "/cat-2.png",
+    src: "./cat-2.png",
     alt: "cat 2",
     name: "sky.",
     type: "queen.",
@@ -18,7 +18,7 @@ const adultsList = [
     age: new Date().getFullYear() - 2020 + " yrs.",
   },
   {
-    src: "/cat-3.png",
+    src: "./cat-3.png",
     alt: "cat 3",
     name: "summer.",
     type: "queen.",
@@ -27,7 +27,7 @@ const adultsList = [
     age: new Date().getFullYear() - 2021 + " yrs.",
   },
   {
-    src: "/cat-4.png",
+    src: "./cat-4.png",
     alt: "cat 4",
     name: "blu.",
     type: "stud.",
@@ -36,7 +36,7 @@ const adultsList = [
     age: new Date().getFullYear() - 2022 + " yrs.",
   },
   {
-    src: "/cat-1.jpg",
+    src: "./cat-1.jpg",
     alt: "cat 1",
     name: "cloud.",
     type: "stud.",

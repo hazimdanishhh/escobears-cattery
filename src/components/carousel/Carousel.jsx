@@ -18,7 +18,7 @@ function Carousel() {
     <div className="carousel">
       <motion.img
         className="carousel-arrow arrow-left"
-        src="/carousel-left-arrow.svg"
+        src="./carousel-left-arrow.svg"
         alt="left arrow"
         onClick={prevSlide}
         whileHover={{ scale: 1.1 }}
@@ -39,7 +39,7 @@ function Carousel() {
 
       <motion.img
         className="carousel-arrow arrow-right"
-        src="/carousel-right-arrow.svg"
+        src="./carousel-right-arrow.svg"
         alt="right arrow"
         onClick={nextSlide}
         whileHover={{ scale: 1.1 }}

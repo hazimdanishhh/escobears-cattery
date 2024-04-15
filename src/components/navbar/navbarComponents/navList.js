@@ -1,7 +1,7 @@
 const navList = [
   {
     href: "#",
-    src: "/home-icon.svg",
+    src: "./home-icon.svg",
     alt: "Home Icon",
   },
   {

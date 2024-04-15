@@ -58,7 +58,7 @@ function Navburger() {
       <button onClick={OpenNav} className="navburger-btn">
         <img
           ref={btnRef}
-          src="/navburger.svg"
+          src="./navburger.svg"
           alt="navburger icon"
           className="navburger-icon"
         />
