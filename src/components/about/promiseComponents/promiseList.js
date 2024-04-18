@@ -23,18 +23,6 @@ const promiseList = [
     title: "gifts.",
     desc: "Free cat carrier and toys for each kitten adopted.",
   },
-  {
-    src: "./gifts.svg",
-    alt: "gifts icon",
-    title: "gifts.",
-    desc: "Free cat carrier and toys for each kitten adopted.",
-  },
-  {
-    src: "./gifts.svg",
-    alt: "gifts icon",
-    title: "gifts.",
-    desc: "Free cat carrier and toys for each kitten adopted.",
-  },
 ];
 
 export default promiseList;
