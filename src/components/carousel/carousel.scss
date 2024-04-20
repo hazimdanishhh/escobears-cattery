@@ -12,6 +12,7 @@
   outline: 2px solid white;
   outline-offset: -10px;
   border-radius: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 
   .carousel-arrow {
     position: absolute;
@@ -36,9 +37,6 @@
   .carousel-img {
     width: 600px;
     height: 600px;
-
-    // width: 100%;
-    // height: 100%;
   }
 
   .carousel-img-hidden {
@@ -56,13 +54,13 @@
       width: 1.3rem;
       border-radius: 10px;
       border: none;
-      box-shadow: 0 0 5px rgba($color: #ffffff11, $alpha: 0.3);
+      box-shadow: 0 0 5px rgba(66, 66, 66, 0.3);
       margin: 0 0.5rem;
       cursor: pointer;
     }
 
     .indicator:hover {
-      background-color: rgba(96, 114, 116, 0.5);
+      background-color: rgba(255, 255, 255, 0.5);
     }
 
     .indicator-inactive {
