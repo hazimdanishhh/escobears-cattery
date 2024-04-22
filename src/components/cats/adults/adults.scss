@@ -1,5 +1,6 @@
 .adults {
   height: 100%;
+  backdrop-filter: blur(20px);
 
   .adults-wrapper {
     display: flex;
@@ -21,6 +22,8 @@
         // width: min-content;
         width: 20%;
         margin-right: 2rem;
+
+        text-shadow: 2px 2px rgba(255, 255, 255, 0.493);
       }
 
       .adults-images {
@@ -45,6 +48,9 @@
         margin-right: 0 !important;
         margin-bottom: 2rem;
         text-align: center;
+
+        color: white;
+        text-shadow: 2px 2px rgb(124, 114, 105) !important;
       }
 
       .adults-images {
