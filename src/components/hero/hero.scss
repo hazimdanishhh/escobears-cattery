@@ -1,5 +1,7 @@
 .hero {
   height: calc(100% - 100px);
+  backdrop-filter: blur(15px);
+  // color: white;
 
   .hero-wrapper {
     display: flex;
@@ -17,9 +19,12 @@
       .welcome-title {
         padding: 1rem;
         font-size: 3rem;
+        text-shadow: 1px 1px white;
       }
 
       .welcome-desc {
+        color: white;
+        text-shadow: 1px 1px black;
         padding: 1rem;
       }
 
@@ -34,6 +39,7 @@
           border: 2px solid rgb(96, 114, 116);
           border-radius: 10px;
           cursor: pointer;
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.116);
         }
 
         .btn:hover {

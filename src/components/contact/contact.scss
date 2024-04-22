@@ -1,5 +1,7 @@
 .contact {
   height: 100%;
+  color: white;
+  background-color: rgba(124, 114, 105, 0.8);
 
   .contact-wrapper {
     display: flex;
@@ -47,8 +49,8 @@
       }
 
       .contact-btn:hover {
-        color: rgb(124, 114, 105);
-        background-color: rgba(124, 114, 105, 0.3);
+        // color: rgb(124, 114, 105);
+        background-color: rgba(177, 167, 158, 0.3);
         transition: 0.2s;
       }
     }
