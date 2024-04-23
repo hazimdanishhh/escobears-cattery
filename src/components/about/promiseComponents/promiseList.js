@@ -15,7 +15,7 @@ const promiseList = [
     src: "./vaccination.svg",
     alt: "vaccination icon",
     title: "vaccination.",
-    desc: "Vaccinated and dewormed according to veterinary standards before adoption.",
+    desc: "Vaccinated and dewormed according to vet standards",
   },
   {
     src: "./gifts.svg",
