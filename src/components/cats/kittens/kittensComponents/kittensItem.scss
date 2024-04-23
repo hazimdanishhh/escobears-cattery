@@ -5,7 +5,6 @@
   overflow: hidden;
 
   margin: 2rem;
-  //   border-radius: 50%;
   border-radius: 10px;
   height: 250px;
   width: 250px;
@@ -71,6 +70,42 @@
 
     .kittens-name {
       font-size: 1rem;
+    }
+  }
+
+  .kittens-img-container-clicked {
+    border-radius: 0;
+    // order: 0;
+    height: 90%;
+    width: 90%;
+
+    cursor: pointer;
+    //   transition: 1s;
+
+    .kittens-img {
+      width: 45%;
+      margin-right: 1rem;
+    }
+
+    .kittens-img-2 {
+      padding: 2px;
+      width: 50%;
+      display: inline-block;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .kittens-img-container {
+    height: 100px;
+    width: 100px;
+
+    .kittens-img {
+      width: 120px;
+    }
+
+    .kittens-name {
+      font-size: 0.8rem;
     }
   }
 
