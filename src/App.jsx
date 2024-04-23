@@ -12,6 +12,7 @@ export default function App() {
   return (
     <div>
       <section id="top">
+        {/* <img src="./litter-b.png" alt="litter b image" className="top-bg-img" /> */}
         <Navbar />
         <Hero />
       </section>
@@ -25,6 +26,7 @@ export default function App() {
       {/* <section>Parallax</section> */}
 
       <section id="cats">
+        {/* <img src="./cat-1.jpg" alt="cat 1 image" className="cats-bg-img" /> */}
         <Adults />
       </section>
 
