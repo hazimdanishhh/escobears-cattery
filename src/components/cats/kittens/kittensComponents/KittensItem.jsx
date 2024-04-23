@@ -1,22 +1,18 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./kittensItem.scss";
 import { motion } from "framer-motion";
-import Carousel from "../../../carousel/Carousel";
+import KittensCarousel from "../kittensCarousel/KittensCarousel";
 
 function KittensItem(props) {
   const [imgIsClicked, setImgIsClicked] = useState(false);
 
-  // TODO: Create new component to open img-2 when img-1 is clicked
-  // const [isClicked, setIsClicked] = useState(false)
-  // ...
-  // {isClicked ? <IMAGE2 COMPONENT /> : <img onClick={() => setIsClicked(true)} src="img-1" />}
-
   const imageRef = useRef();
+  const closeRef = useRef();
 
   useEffect(() => {
     function closeImage(e) {
       console.log(e);
-      if (e.target !== imageRef.current) {
+      if (e.target === closeRef.current) {
         setImgIsClicked(false);
       }
     }
@@ -35,10 +31,21 @@ function KittensItem(props) {
 
   return (
     <>
+      {imgIsClicked ? <KittensCarousel /> : null}
+      {imgIsClicked ? (
+        <motion.img
+          ref={closeRef}
+          // onClick={ImgClicked}
+          className="close-icon"
+          src="./close-icon.svg"
+          alt="close icon"
+          initial={{ scale: 1 }}
+          whileHover={{ scale: 1.1 }}
+        />
+      ) : null}
+
       <motion.div
-        className={`kittens-img-container ${
-          imgIsClicked ? "kittens-img-container-clicked" : null
-        }`}
+        className="kittens-img-container"
         initial={{ scale: 0.5, opacity: 0 }}
         whileInView={{
           scale: 1,
@@ -58,30 +65,6 @@ function KittensItem(props) {
           ref={imageRef}
         />
         <p className="kittens-name">{props.name}</p>
-        <div>
-          <img
-            className="kittens-img-2"
-            src="./litter-a-1.png"
-            alt="kitten 1"
-          />
-          <img
-            className="kittens-img-2"
-            src="./litter-a-2.png"
-            alt="kitten 1"
-          />
-          <img
-            className="kittens-img-2"
-            src="./litter-a-3.png"
-            alt="kitten 1"
-          />
-          <img
-            className="kittens-img-2"
-            src="./litter-a-4.png"
-            alt="kitten 1"
-          />
-
-          {/* <Carousel className="kittens-img-2" /> */}
-        </div>
       </motion.div>
     </>
   );

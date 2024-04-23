@@ -10,20 +10,27 @@
     margin: auto;
     padding: 1rem;
 
-    .kittens-title {
-      width: 100%;
-      margin: 2rem 0;
-      text-align: center;
-    }
-
-    .kittens-images {
+    .kittens-container {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      overflow: hidden;
-      flex-wrap: wrap;
 
-      height: 100%;
+      .kittens-title {
+        width: 100%;
+        margin: 2rem 0;
+        text-align: center;
+      }
+
+      .kittens-images {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        flex-wrap: wrap;
+
+        height: 100%;
+      }
     }
   }
 }

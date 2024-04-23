@@ -25,7 +25,7 @@
 
     position: absolute;
     bottom: 10px;
-    z-index: 100;
+    z-index: 5;
   }
 
   .kittens-img-2 {
@@ -56,6 +56,15 @@
     width: 50%;
     display: inline-block;
   }
+}
+
+.close-icon {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  width: 2rem;
+  z-index: 200;
+  cursor: pointer;
 }
 
 // Media Queries
@@ -92,6 +101,10 @@
       width: 50%;
       display: inline-block;
     }
+  }
+
+  .close-icon {
+    top: calc(70px + 2rem);
   }
 }
 
