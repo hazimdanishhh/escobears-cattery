@@ -30,6 +30,7 @@ function Kittens() {
               return (
                 <KittensItem
                   key={i}
+                  id={i}
                   img={kittenItem.img}
                   alt={kittenItem.alt}
                   name={kittenItem.name}

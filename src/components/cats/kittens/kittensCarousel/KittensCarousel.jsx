@@ -3,19 +3,27 @@ import "./kittensCarousel.scss";
 import kittensCarouselList from "./kittensCarouselList";
 import { motion } from "framer-motion";
 
-function KittensCarousel() {
+function KittensCarousel(props) {
   const [slide, setSlide] = useState(0);
 
   function nextSlide() {
-    setSlide(slide === kittensCarouselList.length - 1 ? 0 : slide + 1);
+    setSlide(
+      slide === kittensCarouselList[props.id].src.length - 1 ? 0 : slide + 1
+    );
   }
 
   function prevSlide() {
-    setSlide(slide === 0 ? kittensCarouselList.length - 1 : slide - 1);
+    setSlide(
+      slide === 0 ? kittensCarouselList[props.id].src.length - 1 : slide - 1
+    );
   }
 
   return (
-    <div className="kittens-carousel">
+    <motion.div
+      className="kittens-carousel"
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+    >
       <motion.img
         className="kittens-carousel-arrow kittens-arrow-left"
         src="./carousel-left-arrow.svg"
@@ -24,7 +32,7 @@ function KittensCarousel() {
         whileHover={{ scale: 1.1 }}
       />
 
-      {kittensCarouselList.map((carouselItem, i) => {
+      {kittensCarouselList[props.id].src.map((carouselItem, i) => {
         return (
           <img
             className={
@@ -33,8 +41,8 @@ function KittensCarousel() {
                 : "kittens-carousel-img kittens-carousel-img-hidden"
             }
             key={i}
-            src={carouselItem.src}
-            alt={carouselItem.alt}
+            src={carouselItem}
+            alt="Image"
           />
         );
       })}
@@ -48,7 +56,7 @@ function KittensCarousel() {
       />
 
       <div className="kittens-indicators">
-        {kittensCarouselList.map((_, i) => {
+        {kittensCarouselList[props.id].src.map((_, i) => {
           return (
             <button
               className={
@@ -62,7 +70,7 @@ function KittensCarousel() {
           );
         })}
       </div>
-    </div>
+    </motion.div>
   );
 }
 

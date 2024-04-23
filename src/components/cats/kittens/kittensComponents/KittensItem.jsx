@@ -31,7 +31,7 @@ function KittensItem(props) {
 
   return (
     <>
-      {imgIsClicked ? <KittensCarousel /> : null}
+      {imgIsClicked ? <KittensCarousel id={props.id} /> : null}
       {imgIsClicked ? (
         <motion.img
           ref={closeRef}
@@ -39,22 +39,20 @@ function KittensItem(props) {
           className="close-icon"
           src="./close-icon.svg"
           alt="close icon"
-          initial={{ scale: 1 }}
+          initial={{ scale: 1, y: 100, opacity: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           whileHover={{ scale: 1.1 }}
         />
       ) : null}
 
       <motion.div
         className="kittens-img-container"
-        initial={{ scale: 0.5, opacity: 0 }}
+        initial={{ scale: 1, opacity: 0 }}
         whileInView={{
-          scale: 1,
           opacity: 1,
-          transition: { duration: 0.5 },
         }}
         whileHover={{
           scale: 1.05,
-          transition: { duration: 0.3 },
         }}
         onClick={ImgClicked}
       >
