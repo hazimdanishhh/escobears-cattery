@@ -32,12 +32,13 @@ section {
 }
 // General Styles
 #top {
-  background-image: url("../litter-b.png");
+  background-image: url("../litter-a.png");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  animation: topslide 50s 10s infinite;
 }
 
 #cats {
@@ -47,37 +48,28 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-
-  // filter: blur(8px);
-  // -webkit-filter: blur(8px);
 }
 
-// #top {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-//   position: relative;
-//   overflow: hidden;
+@keyframes topslide {
+  0% {
+    background-image: url("../litter-a.png");
+  }
+  25% {
+    background-image: url("../litter-e.png");
+  }
 
-//   .top-bg-img {
-//     position: absolute;
-//     width: 100%;
-//   }
-// }
+  50% {
+    background-image: url("../litter-d.png");
+  }
 
-// #cats {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   position: relative;
-//   overflow: hidden;
+  75% {
+    background-image: url("../litter-f.png");
+  }
 
-//   .cats-bg-img {
-//     position: absolute;
-//     width: 100%;
-//   }
-// }
+  100% {
+    background-image: url("../litter-g.png");
+  }
+}
 
 // Test Component
 // .course {
