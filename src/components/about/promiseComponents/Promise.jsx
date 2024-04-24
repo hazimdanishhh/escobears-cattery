@@ -6,18 +6,14 @@ function Promise(props) {
   const itemVariant = {
     initial: {
       opacity: 0,
-      scale: 0.5,
+      x: -50,
     },
     whileInView: {
       opacity: 1,
-      scale: 1,
+      x: 0,
       transition: {
         duration: 1.3,
       },
-    },
-    whileHover: {
-      opacity: 0.6,
-      scale: 1.1,
     },
   };
 
@@ -28,9 +24,8 @@ function Promise(props) {
           className="promise-img"
           src={props.src}
           alt={props.alt}
-          variants={itemVariant}
-          initial="initial"
-          whileInView="whileInView"
+          initial={{ opacity: 0, rotate: -90, scale: 1 }}
+          whileInView={{ opacity: 1, rotate: 0, transition: { duration: 0.8 } }}
           whileHover={{ opacity: 1, scale: 1.1 }}
         />
         <motion.h3
