@@ -40,7 +40,13 @@ function Navburger() {
           open ? "navburger-list navburger-list-open" : null
         }`}
       >
-        <ul className="navburger-links" id="navburger-links">
+        <motion.ul
+          className="navburger-links"
+          id="navburger-links"
+          initial={{ opacity: 0 }}
+          transition={{ delay: 0.2, duration: 0.3 }}
+          whileInView={{ opacity: 1 }}
+        >
           {navList.map((navItem, i) => {
             return (
               <NavItem
@@ -52,13 +58,13 @@ function Navburger() {
               />
             );
           })}
-        </ul>
+        </motion.ul>
       </div>
 
       <button onClick={OpenNav} className="navburger-btn">
         <img
           ref={btnRef}
-          src="./navburger.svg"
+          src={open ? "./navburger-close.svg" : "./navburger.svg"}
           alt="navburger icon"
           className="navburger-icon"
         />

@@ -32,7 +32,7 @@ section {
 }
 // General Styles
 #top {
-  background-image: url("../litter-a.png");
+  background-image: url("../litter-g.png");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -52,14 +52,14 @@ section {
 
 @keyframes topslide {
   0% {
-    background-image: url("../litter-a.png");
+    background-image: url("../litter-g.png");
   }
   25% {
-    background-image: url("../litter-e.png");
+    background-image: url("../litter-g-2.png");
   }
 
   50% {
-    background-image: url("../litter-d.png");
+    background-image: url("../litter-a-2.png");
   }
 
   75% {
